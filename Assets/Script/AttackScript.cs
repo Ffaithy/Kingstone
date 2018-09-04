@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackScript : MonoBehaviour {
+public class AttackScript : CardScript {
 
     public int DamagePerTurn;
     public int TurnsAffected;

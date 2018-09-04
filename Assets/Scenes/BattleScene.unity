@@ -310,8 +310,53 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114304752608661876, guid: 441f9be9027c04b2184e113acc34b673, type: 2}
+    - {fileID: 114116875601369464, guid: 441f9be9027c04b2184e113acc34b673, type: 2}
+    - {fileID: 114762172453340108, guid: 441f9be9027c04b2184e113acc34b673, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 441f9be9027c04b2184e113acc34b673, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &260519109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 260519111}
+  - component: {fileID: 260519110}
+  m_Layer: 0
+  m_Name: CreatureCard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &260519110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 260519109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a988acb306eaa4aa0838dde1981e29b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  EnergyCost: 0
+  DamageAmount: 0
+--- !u!4 &260519111
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 260519109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.93, y: -3.06, z: -0.39}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &282840810
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,6 +565,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1196945797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1196945799}
+  - component: {fileID: 1196945798}
+  m_Layer: 0
+  m_Name: AttackCard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1196945798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1196945797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9532d88e0f1fa4c12820c423c1b1a147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  EnergyCost: 0
+  DamageAmount: 0
+  DamagePerTurn: 0
+  TurnsAffected: 0
+--- !u!4 &1196945799
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1196945797}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.93, y: -3.06, z: -0.39}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1480218071
 GameObject:
@@ -782,6 +872,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c4d755e640924bf697a257440beb156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
+  EnergyCost: 0
+  DamageAmount: 0
 --- !u!1 &2113463656
 GameObject:
   m_ObjectHideFlags: 0

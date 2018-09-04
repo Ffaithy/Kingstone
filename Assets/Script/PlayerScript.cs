@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CreatureScript : CardScript {
+public class PlayerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

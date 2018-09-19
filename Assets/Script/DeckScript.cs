@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerScript : MonoBehaviour {
+public class DeckScript : MonoBehaviour {
 
-    public DeckScript Deck;
+    public int MaxNumCards;
 	// Use this for initialization
 	void Start () {
 		

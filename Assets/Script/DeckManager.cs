@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerScript : MonoBehaviour {
+public class DeckManager : MonoBehaviour {
 
-    public DeckScript Deck;
 	// Use this for initialization
 	void Start () {
 		

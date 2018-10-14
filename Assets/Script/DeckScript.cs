@@ -8,10 +8,12 @@ using UnityEngine;
  */
 public class DeckScript : MonoBehaviour {
 
-    public int MaxNumCards;
+    private int _maxNumCards;
+
 	// Use this for initialization
-	void Start () {
-		
+	void Start () 
+    {
+        this._maxNumCards = GameObject.Find("GameConfig").GetComponent<GameConfig>().MaxNumCardsInDeck;  	
 	}
 	
 	// Update is called once per frame

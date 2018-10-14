@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * LayoutManager  
+ * ??? dynamically computes the coordinates of the cards
+ */
 public class LayoutManager : MonoBehaviour {
 
 	// Use this for initialization

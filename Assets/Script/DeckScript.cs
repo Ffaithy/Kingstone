@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * DeckScript
+ * stores the cards into a collection
+ */
 public class DeckScript : MonoBehaviour {
 
     public int MaxNumCards;

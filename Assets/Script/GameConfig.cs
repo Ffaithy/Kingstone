@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
- * LayoutManager  
- * ??? dynamically computes the coordinates of the cards
- */
-public class LayoutManager : MonoBehaviour {
+public class GameConfig : MonoBehaviour {
+
+    public int MaxTurns;
+    public int MaxNumCardsInDeck;
 
 	// Use this for initialization
 	void Start () {

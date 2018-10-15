@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
     public PlayerScript Enemy;
 
     //static int MaxNumTurns;
-    private const int _maxNumTurns = 10;
+    private int _maxNumTurns;
     private int _currentTurn = 0;
 
     private enum GameState { GameStart, PlayerTurn, EnemyTurn, GameEnd };
@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour {
 
     //constant values in unity
     // convert to singleton for game manager
+<<<<<<< HEAD
 
     private void Awake()
     {
@@ -35,10 +36,17 @@ public class GameManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
 		
+=======
+	// Use this for initialization
+	void Start () 
+    {
+        this._maxNumTurns = GameObject.Find("GameConfig").GetComponent<GameConfig>().MaxTurns;  
+>>>>>>> 36b8aae9c734f79281c06d2f8bb747c597c5fffa
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+    {
 		
 	}
 }

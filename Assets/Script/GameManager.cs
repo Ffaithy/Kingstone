@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
+    public static GameManager Instance { get; private set; }
     public PlayerScript Player;
     public PlayerScript Enemy;
 
@@ -17,8 +18,22 @@ public class GameManager : MonoBehaviour {
 
     //constant values in unity
     // convert to singleton for game manager
-	// Use this for initialization
-	void Start () {
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	

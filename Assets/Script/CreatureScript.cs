@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CreatureScript : CardScript {
 
+    public int Health;
 	// Use this for initialization
 	void Start () {
 		

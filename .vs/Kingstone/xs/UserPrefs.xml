@@ -1,9 +1,18 @@
 ﻿<Properties StartupConfiguration="{31D5E0D3-000D-301F-8C19-C625806BD344}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Singleton.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameConfig.cs">
     <Files>
-      <File FileName="Assets/Script/GameManager.cs" Line="10" Column="5" />
+      <File FileName="Assets/Script/GameManager.cs" Line="10" Column="1" />
       <File FileName="Assets/Script/Singleton.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/PlayerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/LayoutManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/GameConfig.cs" Line="33" Column="26" />
+      <File FileName="Assets/Script/DeckScript.cs" Line="9" Column="42" />
+      <File FileName="Assets/Script/DeckManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Editor/CreatureDrawer.cs" Line="29" Column="9" />
+      <File FileName="Assets/Script/Editor/AttackDrawer.cs" Line="8" Column="44" />
+      <File FileName="Assets/Script/CreatureScript.cs" Line="10" Column="2" />
+      <File FileName="Assets/Script/AttackScript.cs" Line="10" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

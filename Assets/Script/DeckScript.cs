@@ -21,4 +21,8 @@ public class DeckScript : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    //Homework Daras + Violeta - figure how to use the resource script to randomly pick 30 cards from the list of prefabs *extra credit figure out how to make hand system
+    //Homework Daras - Make 30 more cards
+    //Homework Violeta - investigate merging component system and property drawer without breaking prefabs 
 }

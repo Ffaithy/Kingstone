@@ -9,6 +9,7 @@ public class GameConfig : MonoBehaviour {
 
     public int MaxTurns;
     public int MaxNumCardsInDeck;
+    public int MaxNumCardsInHand;
 
     private void Awake()
     {

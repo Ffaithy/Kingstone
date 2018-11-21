@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- * DeckScript
+ * UnitScript
  * stores the cards into a collection
+ * manages player's hand
  */
-public class DeckScript : MonoBehaviour {
+public class UnitScript : MonoBehaviour {
 
     private int _maxNumCards;
     public GameObject[] _deck;
+    public GameObject[] _hand;
 
 	// Use this for initialization
 	void Start () 
@@ -17,6 +19,8 @@ public class DeckScript : MonoBehaviour {
         GameConfig gameConfig = GameObject.Find("GameConfig").GetComponent<GameConfig>();
         this._maxNumCards = gameConfig.MaxNumCardsInDeck;
         _deck = new GameObject[_maxNumCards];
+        _hand = new GameObject[gameConfig.MaxNumCardsInHand];
+
 
         //Populate deck by choosing random cards
         for (int i = 0; i < _maxNumCards; i++)
@@ -38,7 +42,20 @@ public class DeckScript : MonoBehaviour {
 		
 	}
 
-    //Homework Daras + Violeta - figure how to use the resource script to randomly pick 30 cards from the list of prefabs *extra credit figure out how to make hand system
-    //Homework Daras - Make 30 more cards
-    //Homework Violeta - investigate merging component system and property drawer without breaking prefabs 
+    public void DrawCard()
+    {
+        // pick card from deck
+        // remove card from deck
+        // place card in hand 
+        // 
+    }
+
+    public void PlayCard(int cardIndex)
+    {
+        // pick card from hand
+        // remove indexed card from hand
+        // place card on stage TBD
+    }
+
+    //Homework Daras + Implement draw and remove card (google remove elements), make end turn button in unity scene
 }

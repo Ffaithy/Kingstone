@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
 
-    public DeckScript Deck;
+    public UnitScript Deck;
 	// Use this for initialization
 	void Start () {
 		

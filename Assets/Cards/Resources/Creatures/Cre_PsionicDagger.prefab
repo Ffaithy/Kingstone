@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114632509682085000}
   m_Layer: 0
   m_Name: Cre_PsionicDagger
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,4 +54,4 @@ MonoBehaviour:
   Name: Psionic Dagger
   EnergyCost: 4
   DamageAmount: 4
-  health: 4
+  Health: 0

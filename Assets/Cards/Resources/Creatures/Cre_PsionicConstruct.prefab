@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114025809203714356}
   m_Layer: 0
   m_Name: Cre_PsionicConstruct
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,4 +54,4 @@ MonoBehaviour:
   Name: Psionic Construct
   EnergyCost: 5
   DamageAmount: 7
-  health: 3
+  Health: 0

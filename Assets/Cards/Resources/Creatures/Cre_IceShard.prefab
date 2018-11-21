@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114630297977722310}
   m_Layer: 0
   m_Name: Cre_IceShard
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,4 +54,4 @@ MonoBehaviour:
   Name: Ice Shard
   EnergyCost: 5
   DamageAmount: 6
-  health: 3
+  Health: 0

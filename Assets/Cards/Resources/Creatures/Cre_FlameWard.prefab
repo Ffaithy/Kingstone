@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114010867875953470}
   m_Layer: 0
   m_Name: Cre_FlameWard
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,4 +54,4 @@ MonoBehaviour:
   Name: Flame Ward
   EnergyCost: 8
   DamageAmount: 9
-  health: 10
+  Health: 0

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114257788375936552}
   m_Layer: 0
   m_Name: Cre_Drone
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,4 +54,4 @@ MonoBehaviour:
   Name: Drone
   EnergyCost: 3
   DamageAmount: 5
-  health: 4
+  Health: 0

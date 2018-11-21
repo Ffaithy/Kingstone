@@ -9,12 +9,28 @@ using UnityEngine;
 public class DeckScript : MonoBehaviour {
 
     private int _maxNumCards;
-    private CardScript[] _deck;
+    public GameObject[] _deck;
+
 	// Use this for initialization
 	void Start () 
     {
-        this._maxNumCards = GameObject.Find("GameConfig").GetComponent<GameConfig>().MaxNumCardsInDeck;
-        _deck = new CardScript[_maxNumCards];
+        GameConfig gameConfig = GameObject.Find("GameConfig").GetComponent<GameConfig>();
+        this._maxNumCards = gameConfig.MaxNumCardsInDeck;
+        _deck = new GameObject[_maxNumCards];
+
+        //Populate deck by choosing random cards
+        for (int i = 0; i < _maxNumCards; i++)
+        {
+            int type = Random.Range(0, 2);
+            if (type == 0)
+            {
+                _deck[i] = gameConfig.GenerateCreature();
+            }
+            else
+            {
+                _deck[i] = gameConfig.GenerateAttack();
+            }
+        }
 	}
 	
 	// Update is called once per frame

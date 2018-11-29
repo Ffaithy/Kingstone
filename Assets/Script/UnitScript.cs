@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 /*
  * UnitScript
  * stores the cards into a collection
@@ -65,18 +64,31 @@ public class UnitScript : MonoBehaviour
     public void DrawCard()
     {
 
+
         // Search for the first empty slot in the hand, return index. 
         int availableHandSlot = System.Array.IndexOf(_hand, null);
 
-        // Set the returned index to the card at the top of the deck. 
-        _hand[availableHandSlot] = _deck[0];
-
-        // Array.pop, but for some reason unity doesn't offer this function in C#... for shame. 
-        // Essentially, shift all element arrays up by one
-        for (int i = 0; i < (_deck.Length - (availableHandSlot + 1)); i++)
+        if ((availableHandSlot < 0) || (availableHandSlot >= _hand.Length))
         {
-            _deck[i] = _deck[i + 1];
+            return;
         }
+
+        // Search for the first empty slot in the hand, return index. 
+        int availableDeckSlot = System.Array.IndexOf(_deck, null);
+
+        int maxRange = _deck.Length;
+        if (availableDeckSlot > 0)
+        {
+            maxRange = availableDeckSlot;
+        }
+
+        int index = Random.Range(0, maxRange);
+
+        Debug.Log("Generated index: " + index);
+        // Set the returned index to the card at the top of the deck. 
+        _hand[availableHandSlot] = _deck[index];
+
+        Helpers.RemoveElementFromArray(_deck, index);
 
         // Remove the last elemement of the newly shifted array as it is now a duplicate of the element that came before it. 
         _deck[_deck.Length - (availableHandSlot + 1)] = null;
@@ -86,14 +98,10 @@ public class UnitScript : MonoBehaviour
     public void PlayCard(int cardIndex)
     {
         // Do thing to place card on stage
+       // if (_hand[cardIndex].GetComponent<CardScript>().EnergyCost > 5)
+    
 
-        _hand[cardIndex] = null; // remove card from hand
-
-        for (int i = cardIndex; i < (_hand.Length - 1); i++)
-        {
-            _hand[i] = _hand[i + 1]; // pop array
-        }
-        _hand[_hand.Length -1] = null; // remove last element from array since we're left with a duplicate
+        Helpers.RemoveElementFromArray(_hand, cardIndex);
 
     }
 
@@ -108,16 +116,18 @@ public class UnitScript : MonoBehaviour
         {
             if (Input.GetKeyDown(keyCodes[i]))
             {
-                int numberPressed = i + 1;
-                if (numberPressed == 10)
+               // int numberPressed = i + 1;
+                /*if (numberPressed == 10)
                 {
                     numberPressed = 0;
-                }
-                PlayCard(numberPressed);
-                Debug.Log(numberPressed);
+                }*/
+                PlayCard(i);
+                Debug.Log(i);
             }
         }
    
     }
-    //Homework Daras + Implement draw and remove card (google remove elements), make end turn button in unity scene
+    //Homework Daras + update helpers script to cover adding game object to an array (line 89), include checks -  bonus: Think of helper functions for input
+    //Homework Violeta + investigate turn logic, make button actually do something
+    //Bonus - add plane representation of card 
 }

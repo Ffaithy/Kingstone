@@ -43,10 +43,3 @@ public class GameConfig : MonoBehaviour {
     }
 
 }
-
-// creature list
-// attack list
-//Creature and attack prefabs
-// prefabs will take data from the above lists when instantiated 
-// Homework: Daras: Come up with 15 attacks and 15 creatures, make prefabs
-// Homework: Violetta: Come up with best practice for implementing attack and creature lists 

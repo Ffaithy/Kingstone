@@ -25,6 +25,7 @@ public class UnitScript : MonoBehaviour
 
 
     private int _maxNumCards;
+    private int _maxNumCardsInHand;
     public GameObject[] _deck;
     public GameObject[] _hand;
 
@@ -33,8 +34,9 @@ public class UnitScript : MonoBehaviour
     {
         GameConfig gameConfig = GameObject.Find("GameConfig").GetComponent<GameConfig>();
         this._maxNumCards = gameConfig.MaxNumCardsInDeck;
+        this._maxNumCardsInHand = gameConfig.MaxNumCardsInHand;
         _deck = new GameObject[_maxNumCards];
-        _hand = new GameObject[gameConfig.MaxNumCardsInHand];
+        _hand = new GameObject[_maxNumCardsInHand];
 
 
         //Populate deck by choosing random cards
@@ -73,7 +75,7 @@ public class UnitScript : MonoBehaviour
             return;
         }
 
-        // Search for the first empty slot in the hand, return index. 
+        // Search for the first empty slot in the deck, return index. 
         int availableDeckSlot = System.Array.IndexOf(_deck, null);
 
         int maxRange = _deck.Length;
@@ -87,6 +89,12 @@ public class UnitScript : MonoBehaviour
         Debug.Log("Generated index: " + index);
         // Set the returned index to the card at the top of the deck. 
         _hand[availableHandSlot] = _deck[index];
+        // Position the card on screen
+        float xPos = 0.0f - _maxNumCardsInHand + availableHandSlot;
+        Debug.Log("Position " + xPos);
+        _hand[availableHandSlot].transform.position = new Vector3(xPos, 0.0f, 0.0f);
+
+
 
         Helpers.RemoveElementFromArray(_deck, index);
 

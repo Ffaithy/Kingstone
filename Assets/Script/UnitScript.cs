@@ -20,7 +20,7 @@ public class UnitScript : MonoBehaviour
          KeyCode.Alpha7,
          KeyCode.Alpha8,
          KeyCode.Alpha9,
-        KeyCode.Alpha0,
+         KeyCode.Alpha0,
     };
 
 
@@ -90,11 +90,10 @@ public class UnitScript : MonoBehaviour
         // Set the returned index to the card at the top of the deck. 
         _hand[availableHandSlot] = _deck[index];
         // Position the card on screen
-        float xPos = 0.0f - _maxNumCardsInHand + availableHandSlot;
+        float xPos = 0.0f - _maxNumCardsInHand/2 + availableHandSlot;
         Debug.Log("Position " + xPos);
-        _hand[availableHandSlot].transform.position = new Vector3(xPos, 0.0f, 0.0f);
 
-
+        _hand[availableHandSlot].transform.localPosition = new Vector3(xPos, this.transform.localPosition.y, 0.0f);
 
         Helpers.RemoveElementFromArray(_deck, index);
 
@@ -109,7 +108,8 @@ public class UnitScript : MonoBehaviour
        // if (_hand[cardIndex].GetComponent<CardScript>().EnergyCost > 5)
     
 
-        Helpers.RemoveElementFromArray(_hand, cardIndex);
+        GameObject obj = Helpers.RemoveElementFromArray(_hand, cardIndex);
+        Object.Destroy(obj);
 
     }
 

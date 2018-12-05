@@ -30,4 +30,9 @@ public class GameManager : Singleton {
     {
 		
 	}
+
+    public void OnEndTurn()
+    {
+        Debug.Log("Turn ended");
+    }
 }

@@ -45,11 +45,13 @@ public class UnitScript : MonoBehaviour
             int type = Random.Range(0, 2);
             if (type == 0)
             {
-                _deck[i] = gameConfig.GenerateCreature();
+                GameObject creature = gameConfig.GenerateCreature();
+                Helpers.AddElementToArray(_deck, i, creature);
             }
             else
             {
-                _deck[i] = gameConfig.GenerateAttack();
+                GameObject attack = gameConfig.GenerateAttack();
+                Helpers.AddElementToArray(_deck, i, attack);
             }
         }
     }
@@ -87,8 +89,10 @@ public class UnitScript : MonoBehaviour
         int index = Random.Range(0, maxRange);
 
         Debug.Log("Generated index: " + index);
-        // Set the returned index to the card at the top of the deck. 
-        _hand[availableHandSlot] = _deck[index];
+      
+        // Set the returned index to the card at the top of the deck.
+        Helpers.AddElementToArray(_hand, availableHandSlot, _deck[index]);
+
         // Position the card on screen
         float xPos = 0.0f - _maxNumCardsInHand/2 + availableHandSlot;
         Debug.Log("Position " + xPos);

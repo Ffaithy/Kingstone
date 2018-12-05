@@ -27,4 +27,21 @@ public class Helpers  {
 
         return objectToDelete;
     }
+
+    public static GameObject AddElementToArray(GameObject[] gos, int index, GameObject newElement)
+    {
+        if ((index < 0)||(index >= gos.Length)) //gos = hand, index = availablehandslot, new element = deck[passedindex]
+        {
+            return null;
+        }
+
+        GameObject oldElement = gos[index];
+        gos[index] = newElement;
+
+
+        return oldElement;
+
+
+    }
+
 }
